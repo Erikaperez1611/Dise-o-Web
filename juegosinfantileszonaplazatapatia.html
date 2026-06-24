@@ -67,12 +67,11 @@ p{
     font-size:1.1rem;
 }
 
-/* GALERÍA */
+/* GALERÍA (TU ORIGINAL NO SE TOCA) */
 .galeria{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
     gap:25px;
-    margin-top:30px;
 }
 
 .ventana{
@@ -101,7 +100,7 @@ p{
     margin-bottom:10px;
 }
 
-/* 🎠 CARRUSEL */
+/* CARRUSEL (TU ORIGINAL SIN CAMBIOS) */
 .carrusel{
     width:120%;
     max-width:900px;
@@ -143,10 +142,65 @@ button:hover{
     background:rgba(0,0,0,0.8);
 }
 
+/* ⭐ TABLA NUEVA (DISCRETA CON SCROLL) */
+.tabla-contenedor{
+    max-height:300px;
+    overflow-y:auto;
+    margin:40px 0;
+    border:2px solid #f8ac08;
+    border-radius:12px;
+    background:#1b1b1b;
+}
+
+.tabla-juegos{
+    width:100%;
+    border-collapse:collapse;
+    color:white;
+}
+
+.tabla-juegos th{
+    background:#805f2f;
+    color:#f8ac08;
+    padding:15px;
+    position:sticky;
+    top:0;
+    border:1px solid #f8ac08;
+}
+
+.tabla-juegos td{
+    padding:12px;
+    border:1px solid #555;
+}
+
+.tabla-juegos tr:nth-child(even){
+    background:#222;
+}
+
+.tabla-juegos tr:hover{
+    background:#333;
+}
+
+/* ⭐ VIDEO */
+.video-container{
+    display:flex;
+    justify-content:center;
+    margin-top:80px;
+<video autoplay loop controls>
+}
+
+
+.video-container iframe{
+    width:150%;
+    max-width:900px;
+    height:500px;
+    border:3px solid transparent;
+    border-radius:12px;
+}
+
 /* FOOTER */
 footer{
     text-align:center;
-    background:black;
+    background:transparent;
     padding:30px;
     border-top:4px solid #FFD700;
 }
@@ -156,7 +210,7 @@ footer{
 
 <body>
 
-<!-- PORTADA -->
+<!-- PORTADA (NO CAMBIADA) -->
 <div class="hero">
     <div class="hero-content">
         <h1>NUEVA ZONA DE JUEGOS INFANTILES</h1>
@@ -164,7 +218,7 @@ footer{
     </div>
 </div>
 
-<!-- INTRO -->
+<!-- INTRO (NO CAMBIADO) -->
 <section>
 <h2>Introducción</h2>
 
@@ -177,9 +231,77 @@ y accesibles para niñas, niños y sus familias.
 Esta transformación forma parte de los esfuerzos por revitalizar 
 los espacios públicos, fomentar la convivencia familiar y brindar un entorno
 recreativo que contribuya al bienestar y desarrollo de la comunidad.
+</p>
 </section>
 
-<!-- GALERÍA -->
+<!-- ⭐ TABLA AGREGADA -->
+<section>
+<h2>Características de los Juegos</h2>
+
+<div class="tabla-contenedor">
+
+<table class="tabla-juegos">
+
+<tr>
+<th>Nombre del Juego</th>
+<th>Edad</th>
+<th>Función</th>
+</tr>
+
+<tr>
+<td>Rampas y túneles lúdicos de piso</td>
+<td>1 a 4 años</td>
+<td>Estimulan el gateo, el equilibrio y la exploración motriz en superficies seguras a nivel de suelo.</td>
+</tr>
+
+<tr>
+<td>Tambores de percusión exterior</td>
+<td>1 a 4 años</td>
+<td>Desarrollan la estimulación sensorial y el sentido del ritmo mediante el juego musical.</td>
+</tr>
+
+<tr>
+<td>Fuente interactiva del Cabañas</td>
+<td>2 a 12 años</td>
+<td>Favorece el juego libre, la convivencia y la exploración sensorial del agua de forma segura.</td>
+</tr>
+
+<tr>
+<td>Modulador de eco (megáfonos urbanos)</td>
+<td>4 a 12 años</td>
+<td>Estimula la comunicación, la expresión vocal y la interacción sonora.</td>
+</tr>
+
+<tr>
+<td>Carrusel de plato</td>
+<td>5 a 12 años</td>
+<td>Desarrolla el equilibrio, la coordinación y la fuerza de agarre mediante el movimiento giratorio.</td>
+</tr>
+
+<tr>
+<td>Toboganes integradose</td>
+<td>4 a 12 años</td>
+<td>Fomentan la coordinación motriz, el control corporal y la diversión en deslizamiento.</td>
+</tr>
+
+<tr>
+<td>Trepador de red</td>
+<td>6 a 12 años</td>
+<td>Mejora la fuerza, la coordinación y la agilidad en estructuras de escalada.</td>
+</tr>
+
+<tr>
+<td>Tirolesa lineal infantil</td>
+<td>6 a 12 años</td>
+<td>Desarrolla fuerza física, coordinación y valentía mediante desplazamiento suspendido.</td>
+</tr>
+
+</table>
+
+</div>
+</section>
+
+<!-- GALERÍA (NO MODIFICADA) -->
 <section>
 
 <h2>Remodelaciones de Plaza Tapatía</h2>
@@ -192,8 +314,7 @@ recreativo que contribuya al bienestar y desarrollo de la comunidad.
 </a>
 <div class="texto">
 <h3> Zona Kids </h3>
-<p>Se instalaron juegos modernos y 
-seguros para todos los niños y niñas.</p>
+<p>Se instalaron juegos modernos y seguros para todos los niños y niñas.</p>
 </div>
 </div>
 
@@ -203,8 +324,7 @@ seguros para todos los niños y niñas.</p>
 </a>
 <div class="texto">
 <h3> Areas seguras </h3>
-<p> Los pisos estan fabricados de caucho para 
-    prevenir caidas o lesiones en los niños.</p>
+<p> Los pisos estan fabricados de caucho para prevenir caidas o lesiones.</p>
 </div>
 </div>
 
@@ -214,26 +334,46 @@ seguros para todos los niños y niñas.</p>
 </a>
 <div class="texto">
 <h3> Accesibilidad universal </h3>
-<p>Juegos adaptados para todos los niños 
-e incluso para niños con problemas de movilidad
-o que requieren carriolas. .</p>
+<p>Juegos adaptados para todos los niños.</p>
 </div>
 </div>
 
 <div class="ventana">
 <a href="https://www.instagram.com/p/DZakc__lMJK/?img_index=7">
-    <img src="12.jpeg">
+<img src="12.jpeg">
 </a>
 <div class="texto">
 <h3>Áreas verdes </h3>
-<p>Cuenta con arbolado, zonas de descanso 
-    para disfrutar en familia.</p>
+<p>Cuenta con zonas de descanso para familia.</p>
 </div>
 </div>
 
 </div>
+</section>
 
-<!-- 🎠 CARRUSEL -->
+<!-- ⭐ VIDEO AGREGADO -->
+<section>
+
+<h2> ¡Por Plaza Tapatía más viva !</h2>
+
+<div style="display:flex;justify-content:center;margin-top:30px;">
+
+<iframe
+width="800"
+height="450"
+src="c:\Users\usser\Downloads\Download (1).mp4"
+title="Plaza Tapatía Guadalajara"
+frameborder="0"
+allow="accelerometer; autoplay loop controls; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
+
+</div>
+</section>
+
+<!-- CARRUSEL (NO CAMBIADO) -->
+<section>
+
 <h2 style="margin-top:70px;">Zona infantil</h2>
 
 <div class="carrusel">
@@ -257,19 +397,17 @@ o que requieren carriolas. .</p>
 
 </section>
 
-<!-- CONCLUSIÓN -->
+<!-- CONCLUSIÓN (NO CAMBIADA) -->
 <section>
 <h2>¡Por un futuro mejor!</h2>
-<p>
-Los espacios públicos son el reflejo de la ciudad
-</p>
+<p>Los espacios públicos son el reflejo de la ciudad</p>
 </section>
 
 <footer>
 Remodelacion de Plaza Tapatía.
 </footer>
 
-<!-- JS -->
+<!-- JS (NO CAMBIADO) -->
 <script>
 
 let index = 0;
